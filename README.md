@@ -10,8 +10,6 @@ This will make it so you don't have to type in your password anywhere. This is w
 
 Shows all commits on your current branch. Note the hashes next to each commit, those are unique to each commit and identifies each commit.
 
-### git reflog
-
 ### A note about rewriting history
 
 When you do anything on git beyond adding commits, you are rewriting history (e.g., removing commits, force pushing, squashing). Generally, you should never do this on a branch that multiple people are using, or at least you should let them know, lest ye risk some serious git headaches.
@@ -60,7 +58,7 @@ Commit 1: e89084bbb16bf608580fe454cc78dd1e96d5cbae
 
 ### git squash
 
-The soft reset, commit trick earlier is my way of getting around squashing, which I dislike because I don't like using vim but I'm too stubborn to switch my git default text editor, but here it is in case you want to be better than me:
+The soft reset, commit trick earlier is my way of squashing commits. Here's another way using `git rebase` that I don't like using because I don't use vim and I'm too stubborn to change my text editor.
 
 Let's say you want to squish your last 4 commits into a single one. Run `git rebase -i HEAD~4`, you'll get this in response.
 
